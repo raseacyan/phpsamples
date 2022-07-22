@@ -1,0 +1,1 @@
+show individal resource
