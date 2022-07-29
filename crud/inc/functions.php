@@ -41,6 +41,19 @@ function createRecord($table, $data, $conn){
 }
 
 
+function deleteRecord($table, $id, $conn){
+	$sql = "DELETE FROM {$table} WHERE id={$id}";	
+	$result = $conn->query($sql);
+
+	if ($result) {
+	  return true;
+	} else {
+	  echo "Error: " . $sql . "<br>" . $conn->error;die();
+	  return false;
+	}	
+}
+
+
 /***********************************
 @Login
 ************************************/
@@ -100,7 +113,7 @@ function getResources($conn){
 }
 
 function getResourceById($id, $conn){
-	$sql = "SELECT * WHERE id={$id}";
+	$sql = "SELECT * FROM  resources  WHERE id={$id}";
 	$result = $conn->query($sql);
 	
 	$data = array();

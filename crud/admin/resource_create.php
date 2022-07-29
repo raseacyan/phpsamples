@@ -106,33 +106,37 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
 		  <div class="form-group">
 		    <label for="exampleFormControlSelect1">Select Option</label>
 		    <select class="form-control" name="select_option">
-		      <option value="option 1">option 1</option>
-		      <option value="option 2">option 2</option>
-		      <option value="option 3">option 3</option>
-		      <option value="option 4">option 4</option>
-		      <option value="option 5">option 5</option>
+		      <option value="sid-1">option 1</option>
+		      <option value="sid-2">option 2</option>
+		      <option value="sid-3">option 3</option>
+		      <option value="sid-4">option 4</option>
+		      <option value="sid-5">option 5</option>
 		    </select>
 		  </div>
 
 		  <label>Checkbox</label><br>
 		  <div class="form-check">
-		  	<input class="form-check-input" type="checkbox" value="checkbox 1" name="checkbox[]" >
+		  	<input class="form-check-input" type="checkbox" value="cid-1" name="checkbox[]" >
 		  	<label class="form-check-label" >Checkbox 1</label>
 		  </div>
 		  <div class="form-check">
-		  	<input class="form-check-input" type="checkbox" value="checkbox 2" name="checkbox[]">
+		  	<input class="form-check-input" type="checkbox" value="cid-2" name="checkbox[]">
 		  	<label class="form-check-label" >Checkbox 2</label>
+		  </div>
+		  <div class="form-check">
+		  	<input class="form-check-input" type="checkbox" value="cid-3" name="checkbox[]">
+		  	<label class="form-check-label" >Checkbox 3</label>
 		  </div>
 
 		  <label>Radio</label><br>
 		  <div class="form-check">
-			  <input class="form-check-input" type="radio" name="radio"  value="radio 1">
+			  <input class="form-check-input" type="radio" name="radio"  value="rid-1">
 			  <label class="form-check-label">
 			    radio 1
 			  </label>
 		  </div>
 		  <div class="form-check">
-			  <input class="form-check-input" type="radio" name="radio"  value="radio 2">
+			  <input class="form-check-input" type="radio" name="radio"  value="rid-2">
 			  <label class="form-check-label">
 			    radio 2
 			  </label>
