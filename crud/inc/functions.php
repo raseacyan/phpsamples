@@ -40,6 +40,27 @@ function createRecord($table, $data, $conn){
 	
 }
 
+function updateRecord($table, $data, $id, $conn){
+
+	$set = "";
+	foreach($data as $k=>$v){
+		$set .= "`".$k."`='".$v."',";
+	}
+	$set = substr($set, 0,-1);
+
+
+	$sql = "UPDATE {$table} set {$set} WHERE id={$id}";
+	$result = $conn->query($sql);
+
+	if ($result) {
+	  return true;
+	} else {
+	  echo "Error: " . $sql . "<br>" . $conn->error;die();
+	  return false;
+	}
+}
+
+
 
 function deleteRecord($table, $id, $conn){
 	$sql = "DELETE FROM {$table} WHERE id={$id}";	

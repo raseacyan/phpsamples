@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 22, 2022 at 08:27 AM
+-- Generation Time: Aug 05, 2022 at 07:35 AM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.1.2
 
@@ -44,8 +44,9 @@ CREATE TABLE `resources` (
 --
 
 INSERT INTO `resources` (`id`, `short_text`, `number`, `long_text`, `select_option`, `radio`, `checkbox`, `file`, `created_on`) VALUES
-(1, 'Kitten', '50000.00', 'Local kitten for sale. Best price', 'option 5', 'radio 1', 'a:2:{i:0;s:10:\"checkbox 1\";i:1;s:10:\"checkbox 2\";}', '1658467561_cat.png', '2022-07-22 05:26:01'),
-(2, 'Dog', '100000.00', 'this is a dog', 'option 3', 'radio 1', 'a:1:{i:0;s:10:\"checkbox 1\";}', '1658467792_cat.png', '2022-07-22 05:29:52');
+(3, 'New Red Apple', '15.00', 'This is an a new red apple', 'sid-5', 'rid-1', 'a:3:{i:0;s:5:\"cid-1\";i:1;s:5:\"cid-2\";i:2;s:5:\"cid-3\";}', '1659677487_apple.jpg', '2022-07-29 05:07:45'),
+(4, 'Banana', '10.00', 'This is banana', 'sid-1', 'rid-2', 'a:2:{i:0;s:5:\"cid-1\";i:1;s:5:\"cid-3\";}', '1659071318_banana.jpg', '2022-07-29 05:08:38'),
+(9, 'This is a cat', '10.00', 'Cat for sales', 'sid-3', 'rid-2', 'a:3:{i:0;s:5:\"cid-1\";i:1;s:5:\"cid-2\";i:2;s:5:\"cid-3\";}', '1659677591_cat.png', '2022-08-05 05:33:11');
 
 -- --------------------------------------------------------
 
@@ -93,7 +94,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `resources`
 --
 ALTER TABLE `resources`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `users`

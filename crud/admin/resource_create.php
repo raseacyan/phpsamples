@@ -5,9 +5,11 @@ include("../inc/functions.php");
 
 $form_submit_to = "resource_create.php";
 
+
+
 if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
 
-
+	
 	$short_text = htmlspecialchars(trim($_POST['short_text']));
 	$number = htmlspecialchars(trim($_POST['number']));
 	$long_text = htmlspecialchars(trim($_POST['long_text']));
@@ -57,7 +59,15 @@ if($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])){
 		"file" => $file_name
 	);
 
+
+
+
+
+	
+
 	$last_id = createRecord($table, $data, $conn);
+
+	
 
 	echo "Submitted Successfully";
 

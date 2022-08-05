@@ -5,7 +5,7 @@ include("../inc/functions.php");
 
 $resources = getResources($conn);
 
-//display($resources);
+
 
 ?>
 
@@ -24,7 +24,7 @@ $resources = getResources($conn);
             <table id="datatablesSimple">
                 <thead>
                     <tr>
-                        <th>id</th>
+                        <!--<th>id</th>-->
                     	<th>short_text</th>
                         <th>number</th>
                         <th>long_text</th>
@@ -37,7 +37,7 @@ $resources = getResources($conn);
                 </thead>
                 <tfoot>
                     <tr>
-                        <th>id</th>
+                        <!--<th>id</th>-->
                         <th>short_text</th>
                         <th>number</th>
                         <th>long_text</th>
@@ -55,7 +55,7 @@ $resources = getResources($conn);
                 		$checkbox_string = implode(",",$checkbox_array);
                 	?>
                     <tr>
-                        <td><?php echo $resource['id']; ?></td>
+                        <!--<td><?php echo $resource['id']; ?></td>-->
                         <td><a href="resource_view.php?id=<?php echo $resource['id']; ?>"><?php echo $resource['short_text']; ?></a></td>
                         <td><?php echo $resource['number']; ?></td>
                         <td><?php echo $resource['long_text']; ?></td>
@@ -64,10 +64,10 @@ $resources = getResources($conn);
                         <td><?php echo $checkbox_string ; ?></td>
                         <td><?php echo $resource['file']; ?></td>
                         <td>
-                        	EDIT |
+                        	<a href="resource_update.php?id=<?php echo  $resource['id']; ?>" class="btn btn-primary btn-sm btn-block mb-2">Edit</a>
                         	<form action="resource_delete.php" method="post">
                                 <input type="hidden" name="id" value="<?php echo $resource['id']; ?>"/>
-                                <button  class="btn btn-danger" >Delete</button>
+                                <button  class="btn btn-danger btn-sm btn-block" >Delete</button>
                             </form>
 
                         </td>
